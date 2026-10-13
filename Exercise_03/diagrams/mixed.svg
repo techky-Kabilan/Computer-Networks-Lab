@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="610" viewBox="0 0 1100 610">
+<rect width="1100" height="610" fill="#fafafa"/>
+<line x1="280" y1="285" x2="820" y2="285" stroke="#576573" stroke-width="3"/>
+<text x="550.0" y="285.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">Uplink</text>
+<line x1="280" y1="285" x2="160" y2="110" stroke="#576573" stroke-width="3"/>
+<line x1="280" y1="285" x2="160" y2="460" stroke="#576573" stroke-width="3"/>
+<line x1="820" y1="285" x2="940" y2="110" stroke="#576573" stroke-width="3"/>
+<line x1="820" y1="285" x2="940" y2="460" stroke="#576573" stroke-width="3"/>
+<rect x="170.0" y="239.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="280" y="294.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">Hub</text>
+<rect x="710.0" y="239.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="820" y="294.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">Switch</text>
+<rect x="50.0" y="64.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="160" y="119.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">PC1</text>
+<rect x="50.0" y="414.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="160" y="469.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">PC2</text>
+<rect x="830.0" y="64.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="940" y="119.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">PC3</text>
+<rect x="830.0" y="414.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="940" y="469.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">PC4</text>
+<text x="30" y="590" font-family="sans-serif" font-size="19" fill="#253749">Hub segment shares signals; switch learns MAC addresses.</text></svg>

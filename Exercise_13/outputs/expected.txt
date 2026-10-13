@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+A reachable ICMP-responsive target yields matching Echo Replies; other targets may time out. RTT and TTL vary by host/network. Run with raw-socket privileges where required.

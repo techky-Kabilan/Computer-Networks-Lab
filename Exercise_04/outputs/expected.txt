@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+Pings return replies from each host; ARP lists their MAC addresses. The shared file can be read/copied from another PC. Wrong masks, duplicate addresses, cabling or permissions can cause failure.

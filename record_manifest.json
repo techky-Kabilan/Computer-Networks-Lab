@@ -1,0 +1,107 @@
+[
+  {
+    "experiment": 1,
+    "file": "Exercise_01/CN_Exercise_01.pdf",
+    "pages": 2,
+    "bytes": 99082,
+    "sha256": "f12b24477b9024ee291c6ed4533b72ca4eef526d3af09a6af125f187351cc75e"
+  },
+  {
+    "experiment": 2,
+    "file": "Exercise_02/CN_Exercise_02.pdf",
+    "pages": 2,
+    "bytes": 98577,
+    "sha256": "fe035dfa74e62d6fa0f0a6b3af3671fa860e8a75037ff01b4416f8c2e84d4c0e"
+  },
+  {
+    "experiment": 3,
+    "file": "Exercise_03/CN_Exercise_03.pdf",
+    "pages": 3,
+    "bytes": 134774,
+    "sha256": "87a8920c0810e60b57b97c167164c8bc9b90da3919f52b3f987239ab690a7116"
+  },
+  {
+    "experiment": 4,
+    "file": "Exercise_04/CN_Exercise_04.pdf",
+    "pages": 3,
+    "bytes": 120416,
+    "sha256": "fedad79bc8719cceba13e0042ff153a2e1b2fb61cd838d8b1a3a21475d08a57b"
+  },
+  {
+    "experiment": 5,
+    "file": "Exercise_05/CN_Exercise_05.pdf",
+    "pages": 5,
+    "bytes": 116646,
+    "sha256": "a650fe1a2edb19dd2c98a772e79c759564dc9a2eb7f85ac1272991df5181e4d8"
+  },
+  {
+    "experiment": 6,
+    "file": "Exercise_06/CN_Exercise_06.pdf",
+    "pages": 4,
+    "bytes": 115859,
+    "sha256": "6656e54b9077dd93832b97bb9f7c7f50ec93a769d411684c80d30d1db8762faf"
+  },
+  {
+    "experiment": 7,
+    "file": "Exercise_07/CN_Exercise_07.pdf",
+    "pages": 5,
+    "bytes": 118610,
+    "sha256": "386cb0244ea54ebba1a8d30cb6ceaf0f80c9209622602e53ebb8c27d50727dfd"
+  },
+  {
+    "experiment": 8,
+    "file": "Exercise_08/CN_Exercise_08.pdf",
+    "pages": 2,
+    "bytes": 124119,
+    "sha256": "2e0778a1fa2a9cf9cdcb1f35c2474b964a44cb8c927704b1dae69459d397b164"
+  },
+  {
+    "experiment": 9,
+    "file": "Exercise_09/CN_Exercise_09.pdf",
+    "pages": 4,
+    "bytes": 126435,
+    "sha256": "6013837c0ce77919f122a9569628b4204ddb840e2ef7ef3abb48407755a1bc24"
+  },
+  {
+    "experiment": 10,
+    "file": "Exercise_10/CN_Exercise_10.pdf",
+    "pages": 3,
+    "bytes": 144265,
+    "sha256": "194555df0b5a5f9d4ec5f6782a554fd1289125c4124c3aa83ac6396eccf00f0a"
+  },
+  {
+    "experiment": 11,
+    "file": "Exercise_11/CN_Exercise_11.pdf",
+    "pages": 7,
+    "bytes": 140638,
+    "sha256": "27ebffc72a324fbe4ef800783ea882d230e39f84119d7a92b3330eb008dfa35f"
+  },
+  {
+    "experiment": 12,
+    "file": "Exercise_12/CN_Exercise_12.pdf",
+    "pages": 5,
+    "bytes": 114943,
+    "sha256": "a3118146f78f8fc2c722a7d88ede4ada5a81985f8cc329a67a4e5361573a3e40"
+  },
+  {
+    "experiment": 13,
+    "file": "Exercise_13/CN_Exercise_13.pdf",
+    "pages": 4,
+    "bytes": 113803,
+    "sha256": "f8ec8f49fa405b368a255110e9b7ea62b75c848a32de679715ed71b5cd2b5a53"
+  },
+  {
+    "experiment": 14,
+    "file": "Exercise_14/CN_Exercise_14.pdf",
+    "pages": 5,
+    "bytes": 116192,
+    "sha256": "4fef890c5853a95b6afa8431d88ecdee5a7b82fdd9bed9c8680faa8a4021ccdf"
+  },
+  {
+    "experiment": 15,
+    "file": "Exercise_15/CN_Exercise_15.pdf",
+    "pages": 3,
+    "bytes": 113854,
+    "sha256": "c65bab819ab04b9ab0d7a027f8fa4f0012493924bf8aa5395a6d1947e4d25f62"
+  }
+]

@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+Static route display shows R0 primary via 20.0.0.2 for 30/8 and via 40.0.0.2 for the /32 host. Backup appears after primary failure. RIP normally uses direct R0-R2 and reroutes through R1 after convergence.

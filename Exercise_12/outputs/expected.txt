@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+Echo returns the input unchanged. Interactive chat displays the server's typed reply. Sending bye returns bye and closes the session.

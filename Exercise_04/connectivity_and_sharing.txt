@@ -1,0 +1,12 @@
+Set each PC IPv4 address/mask using Ethernet Properties; no gateway needed in the isolated LAN.
+ipconfig /all
+ping 10.1.1.2
+ping 10.1.1.3
+ping 10.1.1.4
+ping 10.1.1.5
+arp -a
+Enable network discovery/file sharing on the lab network.
+On PC1: folder Properties > Sharing > share with assigned users.
+Set sharing and file-system permissions. From PC2 open:
+\\10.1.1.1\SharedFolder
+Copy a test file and compare its contents.

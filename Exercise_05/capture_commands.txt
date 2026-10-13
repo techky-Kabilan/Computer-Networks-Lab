@@ -1,0 +1,13 @@
+GUI: Capture > Options > active Ethernet interface > stop after 100 packets.
+Generate assigned lab traffic, save capture.pcapng, then use display_filters.txt.
+Statistics > Flow Graph; Follow > TCP Stream.
+CLI for assigned Ethernet interface:
+tshark -D
+tshark -i INTERFACE_NUMBER -c 100 -w capture.pcapng
+tshark -r capture.pcapng -Y "tcp or udp"
+tshark -r capture.pcapng -Y arp
+tshark -r capture.pcapng -Y dns
+tshark -r capture.pcapng -Y http
+tshark -r capture.pcapng -Y "ip or icmp"
+tshark -r capture.pcapng -Y "udp.port == 67 or udp.port == 68"
+tshark -r capture.pcapng -q -z io,phs

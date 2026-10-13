@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+PCs in routed LANs exchange packets. DHCP clients receive 192.168.0.x/24, gateway 192.168.0.1 and DNS 208.67.220.220. Cisco.com resolves and responds at 208.67.220.220.

@@ -1,0 +1,17 @@
+PC -> router Ethernet1: copper straight-through.
+Laptop -> router: wireless WPC300N; power off before changing module.
+Router Internet -> modem Port1: copper straight-through.
+Modem Port0 -> cloud coaxial: coaxial cable.
+Cloud Ethernet -> Cisco.com server FastEthernet0: copper straight-through.
+Router LAN: 192.168.0.1, mask 255.255.255.0; SSID HomeNetwork.
+Router LAN DHCP enabled; starting .100; maximum 50 users; DNS 208.67.220.220.
+Router Internet connection: automatic DHCP.
+PC and laptop: DHCP; select HomeNetwork on laptop.
+Cloud: install PT-CLOUD-NM-1CX and PT-CLOUD-NM-1CFE if absent.
+Cloud Config > Cable: Coaxial -> Ethernet; Add. Ethernet provider: Cable.
+Server Fa0: 208.67.220.220/24; global gateway 208.67.220.1; DNS 208.67.220.220.
+Server DHCP service ON; pool DHCPpool; start 208.67.220.1; /24; users 50.
+Server pool gateway 208.67.220.220; DNS 208.67.220.220.
+Server DNS service ON; A record Cisco.com -> 208.67.220.220.
+Verify: ipconfig /release; ipconfig /renew; ipconfig /all; ping Cisco.com.
+This reproduces the manual's isolated Packet Tracer cloud model, not a public Internet deployment.

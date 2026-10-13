@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="610" viewBox="0 0 1100 610">
+<rect width="1100" height="610" fill="#fafafa"/>
+<line x1="550" y1="295" x2="180" y2="150" stroke="#576573" stroke-width="3"/>
+<text x="365.0" y="222.5" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">Wi-Fi</text>
+<line x1="550" y1="295" x2="900" y2="150" stroke="#576573" stroke-width="3"/>
+<text x="725.0" y="222.5" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">Wi-Fi</text>
+<line x1="550" y1="295" x2="550" y2="475" stroke="#576573" stroke-width="3"/>
+<text x="550.0" y="385.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">Wi-Fi</text>
+<rect x="440.0" y="249.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="550" y="292.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">MotherNetwork</text>
+<text x="550" y="316.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">192.168.0.1</text>
+<rect x="70.0" y="104.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="180" y="147.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">PC0</text>
+<text x="180" y="171.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">192.168.0.2</text>
+<rect x="790.0" y="104.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="900" y="147.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">PC1</text>
+<text x="900" y="171.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">192.168.0.3</text>
+<rect x="440.0" y="429.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="550" y="472.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">PC2</text>
+<text x="550" y="496.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">192.168.0.4</text>
+<text x="30" y="590" font-family="sans-serif" font-size="19" fill="#253749">Manual simulation: WEP key 0123456789; all hosts /24.</text></svg>

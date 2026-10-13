@@ -1,0 +1,18 @@
+ACTUAL PROGRAM RUN
+SEND [{"number": 0, "data": "N"}, {"number": 1, "data": "E"}, {"number": 2, "data": "T"}]
+RECEIVER ACK 3
+TIMEOUT: feedback discarded; resend current window
+SEND [{"number": 0, "data": "N"}, {"number": 1, "data": "E"}, {"number": 2, "data": "T"}]
+RECEIVER ACK 3
+INVALID feedback: resend current window
+SEND [{"number": 0, "data": "N"}, {"number": 1, "data": "E"}, {"number": 2, "data": "T"}]
+RECEIVER ACK 3
+ACK 3
+SEND [{"number": 3, "data": "W"}, {"number": 4, "data": "O"}, {"number": 5, "data": "R"}]
+INJECT incorrect number at frame 4
+RECEIVER NACK 4
+NACK 4
+SEND [{"number": 4, "data": "O"}, {"number": 5, "data": "R"}, {"number": 6, "data": "K"}]
+RECEIVER ACK 7
+ACK 7
+Recovered: NETWORK

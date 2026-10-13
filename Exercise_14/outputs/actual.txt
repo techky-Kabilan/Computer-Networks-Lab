@@ -1,0 +1,16 @@
+ACTUAL CLI DECODER RUN ON SYNTHETIC TEST FRAME (not live capture)
+{
+  "destination_ip": "10.1.1.1",
+  "destination_mac": "02:00:00:00:00:01",
+  "ethertype": "0x0800",
+  "header_length": 20,
+  "icmp_code": 0,
+  "icmp_type": 0,
+  "length": 33,
+  "protocol": "ICMP",
+  "source_ip": "10.1.1.2",
+  "source_mac": "02:00:00:00:00:02",
+  "ttl": 64
+}
+
+Live AF_PACKET capture requires Linux and was not run on Windows.

@@ -1,0 +1,19 @@
+ACTUAL LOCAL SOCKET DEMO: TCP echo
+Received: Hello CN
+Received: Unicode: cafe é
+Received: bye
+
+ACTUAL LOCAL SOCKET DEMO: TCP chat
+Received: Server received: Hello CN
+Received: Server received: Unicode: cafe é
+Received: bye
+
+ACTUAL LOCAL SOCKET DEMO: UDP echo
+Received: Hello CN
+Received: Unicode: cafe é
+Received: bye
+
+ACTUAL LOCAL SOCKET DEMO: UDP chat
+Received: Server received: Hello CN
+Received: Server received: Unicode: cafe é
+Received: bye

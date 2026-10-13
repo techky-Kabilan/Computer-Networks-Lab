@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+Live capture prints MAC/IP addresses and protocol fields from traffic reaching the interface. A switched interface does not automatically see every packet in the LAN.

@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+Same-subnet traffic works through the switch. Inter-subnet traffic requires reachable gateways/routes. Removing routing breaks inter-subnet traffic but not local traffic.

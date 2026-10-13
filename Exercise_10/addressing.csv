@@ -1,0 +1,5 @@
+device,interface,ip,prefix,gateway
+Router1,Fa0/0,192.168.10.1,24,none
+Router1,Fa0/1,192.168.20.1,24,none
+PC0,FastEthernet0,192.168.10.2,24,192.168.10.1
+PC1,FastEthernet0,192.168.20.2,24,192.168.20.1

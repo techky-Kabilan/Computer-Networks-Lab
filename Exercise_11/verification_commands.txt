@@ -1,0 +1,15 @@
+STATIC:
+show ip interface brief
+show ip route static
+ping 30.0.0.2
+tracert 30.0.0.2
+tracert 30.0.0.100
+Disable R0 Gi0/1, then inspect route and trace again.
+RIP:
+show controllers serial 0/0/0
+show ip protocols
+show ip route
+ping 20.0.0.2
+tracert 20.0.0.2
+Disable R0 S0/0/1; wait for convergence and repeat.
+Restore each interface with no shutdown.

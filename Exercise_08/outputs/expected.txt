@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+Nmap reports responsive target addresses as Host is up and gives a live-host count. Wireless PCs associate to MotherNetwork and ping the router/peers. Real WLANs should use WPA2/WPA3, not WEP.

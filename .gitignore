@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.venv/
+channel
+Sender_Buffer
+Receiver_Buffer

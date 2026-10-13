@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="610" viewBox="0 0 1100 610">
+<rect width="1100" height="610" fill="#fafafa"/>
+<line x1="260" y1="280" x2="840" y2="280" stroke="#576573" stroke-width="3"/>
+<text x="550.0" y="280.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">Data / response</text>
+<rect x="150.0" y="234.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="260" y="289.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">Access log</text>
+<rect x="730.0" y="234.0" width="220" height="92" rx="7" fill="#eaf0f4" stroke="#253749" stroke-width="2"/>
+<text x="840" y="289.0" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#253749">Webalizer reports</text>
+<text x="30" y="590" font-family="sans-serif" font-size="19" fill="#253749">Monthly/daily/hourly statistics and ranked hosts, URLs and user agents.</text></svg>

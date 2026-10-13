@@ -1,0 +1,7 @@
+ACTUAL PROGRAM RUN
+Input: A
+Encoded: 100010010001
+Corrupted: 100011010001
+Error positions: [6]
+Recovered: A
+Limit: one corrected bit per block; multiple errors may miscorrect.

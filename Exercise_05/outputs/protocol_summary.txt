@@ -1,0 +1,14 @@
+
+===================================================================
+Protocol Hierarchy Statistics
+Filter: 
+
+frame                                    frames:100 bytes:5022
+  null                                   frames:100 bytes:5022
+    ip                                   frames:100 bytes:5022
+      icmp                               frames:4 bytes:256
+      udp                                frames:22 bytes:930
+        data                             frames:22 bytes:930
+      tcp                                frames:74 bytes:3836
+        data                             frames:36 bytes:2140
+===================================================================

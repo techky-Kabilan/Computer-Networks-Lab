@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-10-13T17:22:38.147117+00:00",
+  "platform": "Windows",
+  "python": "3.12.14",
+  "tests_run": 13,
+  "tests_passed": true,
+  "hamming_single_bit_cases": 3072,
+  "live_capture": true,
+  "raw_ping_live": true,
+  "live_capture_packets": 100
+}

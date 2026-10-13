@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+All four assigned hosts communicate. Hub-connected hosts see repeated signals; switch unicast forwarding becomes selective after MAC learning. ARP broadcasts are flooded.

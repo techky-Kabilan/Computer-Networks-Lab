@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+For input A: encoded 100010010001; after bit 6 changes, 100011010001; syndrome 6; recovered A.

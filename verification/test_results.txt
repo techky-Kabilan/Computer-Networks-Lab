@@ -1,0 +1,18 @@
+test_all_bytes_and_all_single_bit_errors (test_programs.HammingTests.test_all_bytes_and_all_single_bit_errors) ... ok
+test_invalid_blocks (test_programs.HammingTests.test_invalid_blocks) ... ok
+test_unicode_and_empty_channel (test_programs.HammingTests.test_unicode_and_empty_channel) ... ok
+test_checksum_known_vector_and_request (test_programs.PacketTests.test_checksum_known_vector_and_request) ... ok
+test_fragments_and_truncation (test_programs.PacketTests.test_fragments_and_truncation) ... ok
+test_reply_with_options_and_matching (test_programs.PacketTests.test_reply_with_options_and_matching) ... ok
+test_sniffer_icmp_udp_tcp (test_programs.PacketTests.test_sniffer_icmp_udp_tcp) ... ok
+test_vlan_and_arp (test_programs.PacketTests.test_vlan_and_arp) ... ok
+test_chat_both_protocols (test_programs.SocketTests.test_chat_both_protocols) ... ok
+test_tcp_and_udp_echo (test_programs.SocketTests.test_tcp_and_udp_echo) ... ok
+test_tcp_message_larger_than_recv_buffer (test_programs.SocketTests.test_tcp_message_larger_than_recv_buffer) ... ok
+test_empty_and_invalid (test_programs.WindowTests.test_empty_and_invalid) ... ok
+test_windows_and_errors (test_programs.WindowTests.test_windows_and_errors) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.384s
+
+OK

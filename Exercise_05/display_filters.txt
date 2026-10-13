@@ -1,0 +1,9 @@
+tcp or udp
+arp
+dns
+http
+ip or icmp
+udp.port == 67 or udp.port == 68
+ip.addr == 127.0.0.1
+tcp.port == 50990
+udp.port == 50991

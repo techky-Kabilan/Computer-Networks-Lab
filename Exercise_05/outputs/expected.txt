@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+TCP shows SYN/SYN-ACK/ACK and data; ARP shows address resolution; DNS query/response; ICMP Echo Request/Reply; DHCP Discover/Offer/Request/ACK. HTTPS does not expose ordinary unencrypted HTTP fields.

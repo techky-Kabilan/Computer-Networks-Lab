@@ -1,0 +1,423 @@
+[
+  {
+    "number": 1,
+    "title": "Study of various Network commands used in Linux and Windows",
+    "aim": "To study and practise network commands used in Linux and Windows.",
+    "pages": "6-13",
+    "requirements": "Windows Command Prompt or PowerShell; a Linux terminal; an assigned lab host/domain for remote tests.",
+    "procedure": [
+      "Run hostname, ipconfig /all (Windows) or ip address show (Linux). Note IP, mask, gateway and DNS for the active interface.",
+      "Test loopback, a same-subnet host and the gateway using ping. Use tracert/pathping on Windows or mtr on Linux to examine hops and loss.",
+      "Inspect neighbour mappings with arp -a or ip neigh show; inspect connection/port status with netstat -an and routing with route print or ip route show.",
+      "Query DNS using nslookup. Use nbtstat for NetBIOS name information when relevant.",
+      "On the assigned Linux lab interface, use the configuration commands to change IPv4/IPv6 settings and activate the NetworkManager profile. Verify address, route and DNS again.",
+      "Capture ten assigned-interface packets with tcpdump. Diagnose failures by checking cable, link state, addresses, routes and name resolution."
+    ],
+    "observations": "Echo Replies indicate ICMP reachability; timeout indicates no reply, and DNS errors indicate name-resolution failure. The actual record is a Windows loopback ping only. Linux configuration and remote-target commands were not applied to this computer.",
+    "expected": "Assigned hosts reply to ping; route commands show connected/default routes; DNS queries return the configured answer. Output addresses, ports and hop counts depend on the lab network.",
+    "result": "Windows loopback connectivity was verified. Complete Linux/Windows command and configuration references are supplied; remaining commands require the assigned lab environment.",
+    "files": [
+      "Exercise_01/configuration_commands.txt",
+      "Exercise_01/linux_commands.sh",
+      "Exercise_01/windows_commands.ps1"
+    ],
+    "diagrams": []
+  },
+  {
+    "number": 2,
+    "title": "Study of Network cables",
+    "aim": "To understand network cable types and make straight-through and cross-wired cables using a crimping tool.",
+    "pages": "14-19",
+    "requirements": "UTP Cat5e cable, two RJ45 connectors, stripper/cutter, crimping tool, optional plug boots and cable tester.",
+    "procedure": [
+      "Identify UTP, STP/SSTP, coaxial and fibre-optic cables. UTP is low cost; shielding reduces EMI; coaxial is used in cable networks; fibre offers high bandwidth and long reach.",
+      "Cut the required cable length, slide on boots and strip about 1.5 cm of jacket without cutting the conductors.",
+      "Arrange all eight wires in T568A or T568B order using pinout.csv. View pins 1-8 with contacts facing you and clip facing away.",
+      "Trim conductors evenly and insert them fully into the RJ45 plug. The jacket must enter the strain relief.",
+      "Crimp both ends. Use A-A or B-B for straight-through, and A-B for a crossover.",
+      "Test continuity and pin mapping. Connect appropriate devices and check the link indicator. Record the actual cable category and any faulty crimps."
+    ],
+    "observations": "Straight-through cables conventionally connect PC-to-switch. Crossover swaps pairs 1/2 with 3/6 for older like-device links. Auto-MDI/MDIX may accept either. Fibre distance and speed depend on the fibre/transceiver; the manual's blanket 100 m limit is not used.",
+    "expected": "Straight-through tester maps pins 1-8 identically. Crossover maps 1-3, 2-6, 3-1, 6-2; other pins match. A correctly terminated cable gives a working link.",
+    "result": "Cable types, standards, pinouts and testing procedure are documented. Physical crimping and tester observations have not been performed here.",
+    "files": [
+      "Exercise_02/pinout.csv",
+      "Exercise_02/wiring.txt"
+    ],
+    "diagrams": []
+  },
+  {
+    "number": 3,
+    "title": "Experiments on CISCO PACKET TRACER (Simulation Tool)",
+    "aim": "To understand Packet Tracer, design simple networks and analyse hub and switch behaviour.",
+    "pages": "20-23",
+    "requirements": "Cisco Packet Tracer; four to six PCs; Hub-PT; 2960 switch; Ethernet connections.",
+    "procedure": [
+      "Install/open Packet Tracer. Identify the device-selection box, Logical/Physical workspace, common tools, Realtime/Simulation tabs and event/PDU list.",
+      "Create four PCs and a hub. Connect each host to a hub port using copper straight-through cables.",
+      "Assign the unique 192.168.1.1-4/24 addresses in addressing.csv. No default gateway is needed within this single subnet.",
+      "Send a Simple PDU between hosts. In Simulation mode inspect ARP and ICMP events and the ports receiving the repeated traffic.",
+      "Build the same network with a switch and repeat. Inspect show mac address-table before and after communication.",
+      "Build the mixed topology with two PCs on the hub and two on the switch; use an uplink or automatic cable choice for the hub-switch connection.",
+      "Compare forwarding and collision domains. Inspect the actual college network and draw its observed labelled topology separately."
+    ],
+    "observations": "A hub repeats signals to all other ports and has one shared collision domain. A switch learns source MAC-to-port mappings and forwards known unicast to the required port. Broadcasts and unknown unicast are flooded within the VLAN. An actual college topology is not invented.",
+    "expected": "All four assigned hosts communicate. Hub-connected hosts see repeated signals; switch unicast forwarding becomes selective after MAC learning. ARP broadcasts are flooded.",
+    "result": "Hub-only, switch-only and combined designs, addresses and switch commands are supplied. Packet Tracer execution and campus inspection remain pending.",
+    "files": [
+      "Exercise_03/addressing.csv",
+      "Exercise_03/switch.cfg"
+    ],
+    "diagrams": [
+      "Exercise_03/diagrams/mixed.png",
+      "Exercise_03/diagrams/star.png"
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Setup and configure a LAN (Local area network) using a Switch and Ethernet cables in your lab",
+    "aim": "To connect 3-4 host machines through a switch, assign IP addresses, verify ping and share files across the LAN.",
+    "pages": "24-26",
+    "requirements": "Four Ethernet PCs, a switch and four straight-through cables; Windows sharing permissions.",
+    "procedure": [
+      "Plan a star topology; connect each PC to a separate switch port and verify link indicators.",
+      "Open Ethernet Properties > IPv4 and assign addressing.csv values: PC1-4 = 10.1.1.1-4, mask 255.0.0.0.",
+      "If the switch is managed, configure management SVI 10.1.1.5/8 using switch.cfg. An unmanaged switch needs no management address.",
+      "Run ping between hosts in both directions and to the managed switch. Inspect ipconfig /all and arp -a.",
+      "Enable network discovery and file sharing on the lab network. Share a test folder on PC1 with the required users.",
+      "From another PC, open the UNC path, copy a test file and verify its content. Sharing and file-system permissions must both allow access."
+    ],
+    "observations": "All isolated-LAN hosts share one /8 network and require unique addresses; a local gateway is unnecessary. A management IP administers the switch and is not required for basic frame forwarding.",
+    "expected": "Pings return replies from each host; ARP lists their MAC addresses. The shared file can be read/copied from another PC. Wrong masks, duplicate addresses, cabling or permissions can cause failure.",
+    "result": "The LAN design, address plan, switch configuration and sharing checks are complete. Physical LAN/file-sharing tests have not been run here.",
+    "files": [
+      "Exercise_04/addressing.csv",
+      "Exercise_04/connectivity_and_sharing.txt",
+      "Exercise_04/switch.cfg"
+    ],
+    "diagrams": [
+      "Exercise_04/diagrams/star.png"
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Experiments on Packet capture tool: Wireshark",
+    "aim": "To understand Wireshark packet capture and encapsulation at the layers of a protocol stack.",
+    "pages": "27-39",
+    "requirements": "Wireshark/TShark, capture support, active lab interface and traffic generators.",
+    "procedure": [
+      "Choose the active Ethernet interface and configure capture stopping after 100 packets. Save the captured packets.",
+      "Inspect Packet List, Packet Details and Packet Bytes. Expand link, IP and transport/application headers.",
+      "Apply the supplied TCP/UDP, ARP, DNS, HTTP, IP/ICMP and DHCP display filters. Record the addresses and fields actually present.",
+      "Generate lab DNS/web/ping/DHCP traffic as needed. For TCP/UDP and DNS, inspect Statistics > Flow Graph; for TCP, use Follow > TCP Stream.",
+      "Distinguish capture filters, which select stored traffic, from display filters, which select visible saved traffic.",
+      "For this submission, capture only project-generated localhost TCP/UDP echo and localhost ICMP. Analyse the resulting 100-packet file with TShark."
+    ],
+    "observations": "Actual evidence is a 100-packet Npcap loopback capture, not physical IEEE 802.3 Ethernet. It contains ICMP, UDP and TCP. ARP/DNS/HTTP/DHCP captures and GUI screenshots are pending. ARP has no transport header; DNS commonly uses UDP 53 (also TCP); HTTP uses TCP 80. Promiscuous mode sees only traffic delivered to the interface.",
+    "expected": "TCP shows SYN/SYN-ACK/ACK and data; ARP shows address resolution; DNS query/response; ICMP Echo Request/Reply; DHCP Discover/Offer/Request/ACK. HTTPS does not expose ordinary unencrypted HTTP fields.",
+    "result": "A real 100-packet local capture was saved and analysed; remaining manual Ethernet/protocol exercises are documented but not claimed as executed.",
+    "files": [
+      "Exercise_05/capture_commands.txt",
+      "Exercise_05/display_filters.txt"
+    ],
+    "diagrams": [
+      "Exercise_05/diagrams/encapsulation.png"
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Error Correction at Data Link Layer",
+    "aim": "To implement Hamming-code error detection and correction, input a data stream and verify error correction.",
+    "pages": "40",
+    "requirements": "Python 3.10+; sender/receiver modes; channel file.",
+    "procedure": [
+      "Read input text of arbitrary length and convert its UTF-8 bytes to binary.",
+      "Use Hamming (12,8) for each byte; put parity at positions 1,2,4,8. The relation is 2^r >= m+r+1.",
+      "Set even parity for each group and write complete encoded blocks to channel.",
+      "Change a chosen bit in a chosen block using flip mode.",
+      "Read channel in receive mode, calculate the syndrome, report/correct a single-bit error, remove parity and recover UTF-8 text.",
+      "Test no error, one-bit error, empty/Unicode text and malformed blocks. Do not claim reliable multi-bit correction."
+    ],
+    "observations": "The implementation was run with input A and bit 6 changed. Tests covered all 256 byte values and all 12 single-bit positions: 3,072 correction cases. Ordinary Hamming does not reliably detect/distinguish all multi-bit errors.",
+    "run": [
+      "python Exercise_06/hamming.py send --text \"Computer Networks\" --channel channel",
+      "python Exercise_06/hamming.py flip --channel channel --block 1 --bit 6",
+      "python Exercise_06/hamming.py receive --channel channel",
+      "python Exercise_06/hamming.py demo --text A --channel channel"
+    ],
+    "expected": "For input A: encoded 100010010001; after bit 6 changes, 100011010001; syndrome 6; recovered A.",
+    "result": "Hamming encoding, single-bit correction and text recovery were executed and verified.",
+    "files": [
+      "Exercise_06/hamming.py"
+    ],
+    "diagrams": [
+      "Exercise_06/diagrams/channel.png"
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Flow control at Data Link Layer",
+    "aim": "To implement sliding-window flow control and simulate frames flowing from one node to another.",
+    "pages": "41",
+    "requirements": "Python 3.10+; Sender_Buffer and Receiver_Buffer files.",
+    "procedure": [
+      "Read window size W and a text message. Treat each character as one numbered frame [number, DATA].",
+      "Write/print the current window into Sender_Buffer. Introduce delay or manual pause before processing feedback.",
+      "The receiver reads Sender_Buffer, accepts in-order frames, discards duplicates and writes ACK next_expected or NACK missing_number to Receiver_Buffer.",
+      "The sender reads the feedback. Advance on a valid ACK; on NACK resend from the indicated frame. On timeout or invalid ACK, resend without incorrectly advancing.",
+      "Overwrite buffers for each new window. During manual mode, edit a frame/ACK number to verify behaviour.",
+      "Use built-in injections for an incorrect frame, discarded feedback (timeout) and an out-of-window ACK. Piggybacking is an optional extension, not claimed in this one-way simulation."
+    ],
+    "observations": "This is a file-buffer Go-Back-N style simulation, not a hardware link protocol. The live program recovered NETWORK after timeout, invalid ACK and NACK 4. Tests exercised windows 1,3,20, empty input and invalid sizes.",
+    "run": [
+      "python Exercise_07/sliding_window.py --text NETWORK --window 3",
+      "python Exercise_07/sliding_window.py --text NETWORK --window 3 --error-at 4 --bad-ack-once --timeout-once",
+      "python Exercise_07/sliding_window.py --text NETWORK --window 3 --manual --delay 1"
+    ],
+    "expected": "Without errors: frames 0-2 -> ACK 3; 3-5 -> ACK 6; 6 -> ACK 7. An incorrect frame 4 generates NACK 4 followed by retransmission.",
+    "result": "Window advancement, timeout/invalid-ACK handling and retransmission were executed and verified using the specified buffer files.",
+    "files": [
+      "Exercise_07/sliding_window.py"
+    ],
+    "diagrams": [
+      "Exercise_07/diagrams/window.png"
+    ]
+  },
+  {
+    "number": 8,
+    "title": "NMAP to Discover Live Hosts Using Nmap Scans (ARP, ICMP, TCP/UDP) on the TryHackMe Platform",
+    "aim": "To discover live hosts using Nmap ARP, ICMP and TCP/UDP scans; additionally configure the manual's wireless LAN.",
+    "pages": "42-59",
+    "requirements": "TryHackMe Nmap Live Host Discovery room and assigned target; Nmap; Packet Tracer for wireless Part B.",
+    "procedure": [
+      "Start the TryHackMe lab machine and AttackBox or approved VPN machine. Identify the assigned target/subnet.",
+      "Preview targets using -sL -n; supply a host, range, CIDR block or -iL list. For 10.10.12.13/29 the block contains addresses .8-.15.",
+      "Run ARP discovery (-PR -sn) for local Ethernet hosts. Compare ICMP Echo (-PE), Timestamp (-PP) and Mask (-PM) discovery.",
+      "Run TCP SYN (-PS), TCP ACK (-PA) and UDP (-PU) discovery. Use --disable-arp-ping to compare IP probes on a local link.",
+      "Observe SYN/ACK or RST for SYN probes; RST for ACK probes; UDP response or ICMP port unreachable for UDP probes. No response is inconclusive.",
+      "Part B: add three wireless PCs and a Linksys router. Configure MotherNetwork, LAN 192.168.0.1/24 and static PC .2,.3,.4 with .1 gateway.",
+      "Reproduce legacy WEP key 0123456789 only in the manual simulation. Join the SSID with matching settings and test router/peer pings."
+    ],
+    "observations": "ARP only discovers local-link hosts; IP discovery can be filtered. TCP SYN supports an unprivileged connect method; crafted ACK discovery requires privileges. -n skips DNS and -R requests reverse lookup for all targets. No TryHackMe scan or wireless simulation was executed here.",
+    "expected": "Nmap reports responsive target addresses as Host is up and gives a live-host count. Wireless PCs associate to MotherNetwork and ping the router/peers. Real WLANs should use WPA2/WPA3, not WEP.",
+    "result": "All required discovery commands and Part B wireless settings are supplied; live scans and WLAN execution are pending.",
+    "files": [
+      "Exercise_08/nmap_commands.sh",
+      "Exercise_08/wireless_config.txt"
+    ],
+    "diagrams": [
+      "Exercise_08/diagrams/wireless.png"
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Implementation of SUBNETTING in CISCO PACKET TRACER simulator",
+    "aim": "To design multiple subnets, assign static IP addresses, connect them through routers and compare connectivity with/without routing.",
+    "pages": "60-63",
+    "requirements": "Packet Tracer; two 2911 routers (three Gigabit interfaces each), four access switches and five hosts per LAN.",
+    "procedure": [
+      "Calculate /27 from a /24: borrow three bits; obtain eight subnets, block size 32 and 30 usable hosts. Network/broadcast addresses are not host addresses.",
+      "Build four separate LANs 192.168.1.0/27 through 192.168.4.0/27, as in the manual's address examples. Each has a separate switch.",
+      "Assign host addresses .11-.15, /27 masks and gateway .1 from addressing.csv. R1 serves LANs 1/2 and R2 serves LANs 3/4.",
+      "Connect R1/R2 through the added 10.255.0.0/30 transit link. Apply both router configurations, including reciprocal remote-LAN static routes.",
+      "Apply access-port switch configuration to each LAN switch. Do not assign network IDs to physical Layer 2 switch ports.",
+      "Ping within a LAN, between the two LANs on one router and across the transit link. Inspect the routing table and packet simulation.",
+      "Disable the relevant router/transit link and compare failed inter-subnet communication with continuing same-subnet communication."
+    ],
+    "observations": "The manual mixes a /24-to-/27 calculation with LANs from four different /24 blocks; this submission explicitly distinguishes them. Separate switches avoid unintended shared broadcast domains. The transit link/routes complete cross-router connectivity that the manual omits.",
+    "expected": "Same-subnet traffic works through the switch. Inter-subnet traffic requires reachable gateways/routes. Removing routing breaks inter-subnet traffic but not local traffic.",
+    "result": "A complete four-subnet configuration is supplied and address plans are checked offline; Packet Tracer connectivity remains pending.",
+    "files": [
+      "Exercise_09/addressing.csv",
+      "Exercise_09/R1.cfg",
+      "Exercise_09/R2.cfg",
+      "Exercise_09/switch.cfg"
+    ],
+    "diagrams": [
+      "Exercise_09/diagrams/subnets.png"
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Internetworking with routers in CISCO PACKET TRACER simulator",
+    "aim": "To configure a simple routed internetwork and a wireless-router/DHCP/cloud network, then reproduce the wired network in the physical lab.",
+    "pages": "64-79",
+    "requirements": "Packet Tracer; router with Fa0/0 and Fa0/1, two switches/host groups; wireless router, laptop, modem, cloud and server.",
+    "procedure": [
+      "Part A: connect LAN 192.168.10.0/24 and LAN 192.168.20.0/24 to Router1 Fa0/0 and Fa0/1 through switches.",
+      "Apply Router1.cfg; assign PC0 .10.2 and PC1 .20.2 with their local .1 gateway. Expand each side to 3-4 hosts with unique addresses.",
+      "Send ping/Simple PDU in both directions. Trace router forwarding and reply; directly connected routes are sufficient.",
+      "Part B: build PC/laptop -> wireless router -> cable modem -> cloud -> Cisco.com server using the specified Ethernet/coaxial connections.",
+      "Set HomeNetwork, router LAN 192.168.0.1/24, LAN DHCP/DNS and automatic WAN DHCP. Install WPC300N in the powered-off laptop if needed.",
+      "Configure cloud modules and the Coaxial-to-Ethernet mapping with Cable provider. Configure the server IP, upstream DHCP pool and DNS A record exactly as supplied.",
+      "Renew PC addresses, inspect ipconfig /all and ping Cisco.com. Save the file.",
+      "Part C: reproduce Part A with physical switches, router and Ethernet cables; record actual addresses, links and connectivity."
+    ],
+    "observations": "Clients receive LAN settings from the wireless router; its WAN receives separate upstream settings. The server/cloud addresses reproduce the manual's isolated simulation. They are not a production Internet design. No external packet transmission or physical equipment configuration is claimed.",
+    "expected": "PCs in routed LANs exchange packets. DHCP clients receive 192.168.0.x/24, gateway 192.168.0.1 and DNS 208.67.220.220. Cisco.com resolves and responds at 208.67.220.220.",
+    "result": "All three parts have configuration and verification procedures; Packet Tracer and physical-lab execution remain pending.",
+    "files": [
+      "Exercise_10/addressing.csv",
+      "Exercise_10/cloud_dhcp_dns_config.txt",
+      "Exercise_10/Router1.cfg"
+    ],
+    "diagrams": [
+      "Exercise_10/diagrams/cloud.png",
+      "Exercise_10/diagrams/routed.png"
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Routing at Network Layer",
+    "aim": "To simulate static routing and RIP configuration using Cisco Packet Tracer.",
+    "pages": "80-92",
+    "requirements": "Static lab: three 2911 routers and PCs. RIP lab: routers with Fa0/1 and two serial ports, DCE/DTE serial cables.",
+    "procedure": [
+      "Static part: create the triangle in diagrams/static.svg, assign all router/host addresses, and apply static_R0/R1/R2.cfg.",
+      "On R0, provide AD 10 primary and AD 20 backup routes to 30.0.0.0/8 and 50.0.0.0/8. Provide separate /32 host routes to 30.0.0.100.",
+      "On R1/R2 configure return/remote routes. Check show ip route static, ping and tracert for a normal LAN host and the /32 host.",
+      "Disable R0 Gi0/1 to remove the primary path; inspect the backup via R2. Restore the interface afterward.",
+      "RIP part: create the /30 serial triangle from rip configurations. Fit serial modules while powered off. Match the documented DCE ends; verify using show controllers serial.",
+      "Set clock rate 64000 on DCE ends, assign interface addresses and enable interfaces. Set endpoint LANs consistently to /8.",
+      "Enable RIPv2, no auto-summary and networks from rip_R0/R1/R2.cfg. Confirm learned R routes and show ip protocols.",
+      "Ping/trace PC0 to PC1, disable direct R0-R2 serial link, wait for convergence and verify the R0-R1-R2 path. Restore and recheck."
+    ],
+    "observations": "Longest-prefix match makes the /32 host route more specific than /8. Lower AD chooses among equivalent prefixes; RIP selects hop count and treats metric 16 as unreachable. Serial DCE clocking and host masks are made consistent where the manual has conflicting examples.",
+    "expected": "Static route display shows R0 primary via 20.0.0.2 for 30/8 and via 40.0.0.2 for the /32 host. Backup appears after primary failure. RIP normally uses direct R0-R2 and reroutes through R1 after convergence.",
+    "result": "Complete static/backup/host-route and RIPv2 configurations are supplied. Offline addressing checks pass; router simulation remains pending.",
+    "files": [
+      "Exercise_11/rip_hosts.csv",
+      "Exercise_11/rip_R0.cfg",
+      "Exercise_11/rip_R1.cfg",
+      "Exercise_11/rip_R2.cfg",
+      "Exercise_11/static_hosts.csv",
+      "Exercise_11/static_R0.cfg",
+      "Exercise_11/static_R1.cfg",
+      "Exercise_11/static_R2.cfg",
+      "Exercise_11/verification_commands.txt"
+    ],
+    "diagrams": [
+      "Exercise_11/diagrams/rip.png",
+      "Exercise_11/diagrams/static.png"
+    ]
+  },
+  {
+    "number": 12,
+    "title": "End-End Communication at Transport Layer",
+    "aim": "To implement echo client/server using TCP/UDP sockets and implement a chat program using socket programming.",
+    "pages": "93-95",
+    "requirements": "Python 3.10+ and two terminals, or the automatic real-socket demo mode.",
+    "procedure": [
+      "Select TCP or UDP and echo or chat. Start server mode before client mode on the same agreed port.",
+      "TCP: create/bind/listen/accept and connect. Send a four-byte length followed by message bytes; receive exactly the header and payload lengths.",
+      "UDP: bind server, receive datagrams with the peer address and reply to that peer. The client uses a connected UDP socket for the chosen server.",
+      "Echo returns the same bytes. Chat is turn-based: client sends text; server reads it and enters a reply. Both peers continue until bye.",
+      "Run demo mode for all four combinations; it starts a server thread and a real localhost client, exchanges Unicode messages, then closes cleanly.",
+      "For two physical computers, bind the server to its assigned interface/0.0.0.0 and point the client to the server LAN IP."
+    ],
+    "observations": "Actual TCP/UDP echo and chat demos ran on loopback. TCP tests included a 70,000-character message to verify handling beyond a recv buffer. UDP preserves datagram boundaries; it has no reliability/order guarantee. No two-computer deployment is claimed.",
+    "run": [
+      "python Exercise_12/sockets_lab.py demo --protocol tcp --application echo",
+      "python Exercise_12/sockets_lab.py demo --protocol udp --application echo",
+      "python Exercise_12/sockets_lab.py demo --protocol tcp --application chat",
+      "python Exercise_12/sockets_lab.py demo --protocol udp --application chat",
+      "python Exercise_12/sockets_lab.py server --protocol tcp --application chat --port 5002",
+      "python Exercise_12/sockets_lab.py client --protocol tcp --application chat --port 5002"
+    ],
+    "expected": "Echo returns the input unchanged. Interactive chat displays the server's typed reply. Sending bye returns bye and closes the session.",
+    "result": "TCP/UDP echo and turn-based chat were executed and verified using real local sockets.",
+    "files": [
+      "Exercise_12/sockets_lab.py"
+    ],
+    "diagrams": [
+      "Exercise_12/diagrams/sockets.png"
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Implement your own ping program",
+    "aim": "To implement a ping program using ICMP Echo Requests and Replies.",
+    "pages": "96",
+    "requirements": "Python 3.10+, IPv4 network and raw ICMP socket privileges.",
+    "procedure": [
+      "Resolve the hostname to IPv4 and open an AF_INET SOCK_RAW IPPROTO_ICMP socket.",
+      "Build Echo Request type 8/code 0 with identifier, changing sequence and payload. Calculate the one's-complement checksum with the checksum field initially zero.",
+      "Send the packet, record monotonic time and wait until the timeout deadline.",
+      "Use IPv4 IHL to locate ICMP; validate total length, protocol, source, type/code, identifier, sequence and checksum. Ignore fragments and unrelated packets.",
+      "Accept only the matching reply with the correct payload. Measure RTT; repeat for the requested count and interval.",
+      "Display replies/timeouts, received/lost counts and min/average/max RTT."
+    ],
+    "observations": "The custom raw-socket program actually ran against 127.0.0.1 and received two matching replies. Measured times are recorded in actual.txt. Offline tests also cover the checksum known vector, IP options, mismatched identifiers and truncated replies.",
+    "run": [
+      "python Exercise_13/ping.py 127.0.0.1 --count 4",
+      "python Exercise_13/ping.py 127.0.0.1 --count 2 --interval 0.1 --timeout 1"
+    ],
+    "expected": "A reachable ICMP-responsive target yields matching Echo Replies; other targets may time out. RTT and TTL vary by host/network. Run with raw-socket privileges where required.",
+    "result": "The custom ICMP ping program was executed on localhost and its packet/checksum logic was verified.",
+    "files": [
+      "Exercise_13/ping.py"
+    ],
+    "diagrams": [
+      "Exercise_13/diagrams/icmp.png"
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Write a code using RAW sockets to implement packet sniffing",
+    "aim": "To implement packet sniffing using raw sockets and decode packet headers.",
+    "pages": "97",
+    "requirements": "Linux AF_PACKET for live capture, appropriate privileges, Python 3.10+. Offline decoding tests run on any supported Python platform.",
+    "procedure": [
+      "Open AF_PACKET SOCK_RAW with ETH_P_ALL and bind the assigned interface.",
+      "Receive Ethernet frames, validate length and unpack MAC addresses and EtherType. Handle one VLAN tag when present.",
+      "For IPv4, validate version/IHL/total length and display IP addresses, TTL and protocol. Mark fragments instead of treating fragment payload as a complete transport header.",
+      "Decode TCP ports, sequence, ACK and flags; UDP ports and length; ICMP type/code. Identify ARP by EtherType.",
+      "Print a fixed number of frames and close the socket. Use --hex to decode the supplied deterministic synthetic fixture offline.",
+      "Run parser tests for ICMP/TCP/UDP, VLAN, ARP, fragments and truncated frames."
+    ],
+    "observations": "Actual output comes from running the decoder on an explicitly synthetic Ethernet/IPv4/ICMP fixture. Linux AF_PACKET live capture was not executed on this Windows host. The separate Wireshark loopback capture must not be presented as this program's live Ethernet output.",
+    "run": [
+      "sudo python3 Exercise_14/sniffer.py --interface eth0 --count 10",
+      "python Exercise_14/sniffer.py --hex-file Exercise_14/outputs/fixture.hex"
+    ],
+    "expected": "Live capture prints MAC/IP addresses and protocol fields from traffic reaching the interface. A switched interface does not automatically see every packet in the LAN.",
+    "result": "Complete live-capture code is supplied, and the offline decoder/edge cases were verified. Linux live raw capture is pending.",
+    "files": [
+      "Exercise_14/sniffer.py"
+    ],
+    "diagrams": [
+      "Exercise_14/diagrams/headers.png"
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Analyse various types of servers using Webalizer tool",
+    "aim": "To analyse different types of web logs using Webalizer.",
+    "pages": "98-100",
+    "requirements": "Webalizer Windows GUI or CLI; compatible web access log; supplied configuration and synthetic combined-log fixture.",
+    "procedure": [
+      "Start the Windows Webalizer application as in the manual; input a compatible access-log file and press Run Webalizer.",
+      "For CLI, create reports directory and run webalizer -c webalizer.conf from this experiment directory. run.ps1 checks the executable before doing so.",
+      "Inspect monthly, daily and hourly statistics; distinguish hits, files, pages, visits, hosts and transferred bytes.",
+      "Inspect URLs, entry/exit pages, ranked Hosts and User-agents. Combined logs supply referrer and agent information.",
+      "Report actual peak periods and resources from the log. Do not equate IP hosts with unique people or hits with page views.",
+      "For the supplied synthetic five-line fixture, compare the deterministic raw-log counts with the expected report totals."
+    ],
+    "observations": "Webalizer is not installed, so no actual Webalizer HTML/chart output is claimed. The synthetic log has reserved documentation IPs and artificial agent names. An independent fixture check verifies five lines, two IPs and 4,000 response bytes; it is not a Webalizer run.",
+    "run": [
+      "cd Exercise_15",
+      "mkdir reports",
+      "webalizer -c webalizer.conf"
+    ],
+    "expected": "For the supplied fixture: 5 hits, 5 successful file requests, 3 HTML page requests, 2 client IPs and 4,000 response bytes. Session/visit and user-agent tables depend on the configured Webalizer rules/version.",
+    "result": "A complete Webalizer configuration, sample input log and report interpretation are supplied; Webalizer execution remains pending.",
+    "files": [
+      "Exercise_15/run.ps1",
+      "Exercise_15/webalizer.conf",
+      "Exercise_15/data/access.log"
+    ],
+    "diagrams": [
+      "Exercise_15/diagrams/reports.png"
+    ]
+  }
+]

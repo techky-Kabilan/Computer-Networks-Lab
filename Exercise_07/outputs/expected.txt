@@ -1,0 +1,2 @@
+EXPECTED OUTPUT / OBSERVATION - NOT AN EXECUTION RECORD
+Without errors: frames 0-2 -> ACK 3; 3-5 -> ACK 6; 6 -> ACK 7. An incorrect frame 4 generates NACK 4 followed by retransmission.

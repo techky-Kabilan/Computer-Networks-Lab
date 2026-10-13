@@ -1,0 +1,9 @@
+ACTUAL RAW-SOCKET LOOPBACK RUN
+PING 127.0.0.1 (127.0.0.1)
+Reply from 127.0.0.1: seq=1 bytes=22 TTL=128 time=0.353 ms
+Reply from 127.0.0.1: seq=2 bytes=22 TTL=128 time=0.291 ms
+Sent=2 Received=2 Loss=0.0%
+RTT min/avg/max = 0.291/0.322/0.353 ms
+
+Actual offline tests: checksum known vector, request checksum,
+matching replies with IP options, mismatch and truncation checks passed.

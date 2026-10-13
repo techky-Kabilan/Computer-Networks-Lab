@@ -1,0 +1,5 @@
+198.51.100.10 - - [13/Oct/2026:10:00:00 +0530] "GET /index.html HTTP/1.1" 200 1000 "-" "CN-Demo-Browser/1.0"
+198.51.100.10 - - [13/Oct/2026:10:00:01 +0530] "GET /style.css HTTP/1.1" 200 200 "http://cn-lab/index.html" "CN-Demo-Browser/1.0"
+198.51.100.10 - - [13/Oct/2026:10:01:00 +0530] "GET /about.html HTTP/1.1" 200 1500 "http://cn-lab/index.html" "CN-Demo-Browser/1.0"
+198.51.100.20 - - [13/Oct/2026:10:02:00 +0530] "GET /logo.png HTTP/1.1" 200 300 "-" "CN-Demo-Crawler/1.0"
+198.51.100.20 - - [13/Oct/2026:10:02:01 +0530] "GET /index.html HTTP/1.1" 200 1000 "-" "CN-Demo-Crawler/1.0"

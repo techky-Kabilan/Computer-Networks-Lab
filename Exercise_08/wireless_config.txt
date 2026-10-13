@@ -1,0 +1,8 @@
+Router LAN 192.168.0.1/24; SSID MotherNetwork.
+Manual simulation security: WEP; Key1 0123456789.
+Administration credentials in manual simulation: admin/admin.
+PC0 192.168.0.2; PC1 192.168.0.3; PC2 192.168.0.4.
+All masks 255.255.255.0; gateway 192.168.0.1.
+Install wireless adapters while devices are powered off; PC Wireless > Connect > Refresh > MotherNetwork > enter key.
+Use WPA2/WPA3 and unique credentials on physical equipment; WEP is legacy.
+Ping router and peer; save the topology.

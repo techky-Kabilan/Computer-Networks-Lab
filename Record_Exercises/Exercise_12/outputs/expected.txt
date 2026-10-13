@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+Hosts responding to the permitted discovery probes are listed as up with reasons where available. Results depend on the assigned lab hosts and firewall rules.

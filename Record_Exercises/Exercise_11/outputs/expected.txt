@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+Inside hosts receive replies and open the HTTP page; the translation table shows both private hosts translated to 203.0.113.2.

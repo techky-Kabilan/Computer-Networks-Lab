@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+For the supplied fixture: 5 hits, 5 successful file requests, 3 HTML page requests, 2 client IPs and 4,000 response bytes. Session/visit and user-agent tables depend on the configured Webalizer rules/version.

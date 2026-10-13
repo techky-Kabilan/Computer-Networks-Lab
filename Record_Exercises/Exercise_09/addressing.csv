@@ -1,0 +1,7 @@
+device,interface,IPv4,mask,gateway
+R1,GigabitEthernet0/0,192.168.10.1,255.255.255.0,none
+R1,GigabitEthernet0/1,192.168.20.1,255.255.255.0,none
+PC1,FastEthernet0,192.168.10.11,255.255.255.0,192.168.10.1
+PC2,FastEthernet0,192.168.10.12,255.255.255.0,192.168.10.1
+PC3,FastEthernet0,192.168.20.11,255.255.255.0,192.168.20.1
+PC4,FastEthernet0,192.168.20.12,255.255.255.0,192.168.20.1

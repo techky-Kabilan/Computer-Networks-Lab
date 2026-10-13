@@ -1,0 +1,3 @@
+ACTUAL FIXTURE CHECK - NOT WEBALIZER OUTPUT
+5 log records; 2 client IPs; 3 HTML requests; 4,000 response bytes.
+Webalizer executable was not available; report generation not run.

@@ -1,0 +1,13 @@
+PC1 --       SW1 -- R1 Gi0/0 [inside] Gi0/1 -- ISP Gi0/0 Gi0/1 -- Server
+PC2 --/
+R1/ISP: 2911 routers; SW1: 2960; Server: Server-PT.
+Use addressing.csv and copper straight-through cables for host/switch links.
+Use automatic cable choice for direct router/router and router/server links.
+Enable HTTP under Server > Services > HTTP.
+PC1 and PC2: ping 198.51.100.10
+PC1 web browser: http://198.51.100.10
+R1 immediately after traffic: show ip nat translations
+Inside local: 192.168.40.11 / 192.168.40.12
+Inside global: 203.0.113.2 (shared using distinct ports/ICMP identifiers)
+Outside global: 198.51.100.10
+ISP deliberately has no route to 192.168.40.0/24; return traffic uses NAT.

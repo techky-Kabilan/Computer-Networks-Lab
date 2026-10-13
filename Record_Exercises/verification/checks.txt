@@ -1,0 +1,9 @@
+PASS: anonymous FTP login accepted and rejected using local servers
+PASS: XML-RPC add/subtract/multiply/divide and zero-division fault
+PASS: localhost reverse-shell command and exit
+PASS: raw-sniffer fixture decode
+PASS: ICMP Echo checksum
+PASS: synthetic PCAP structure/endpoints
+PASS: syntax compilation of supplied Python programs
+Previously captured localhost Wireshark output retained for Exercise 14.
+Packet Tracer, physical crimping, Nmap/TryHackMe, PcapXray GUI and Webalizer not executed.

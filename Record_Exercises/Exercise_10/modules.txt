@@ -1,0 +1,12 @@
+Device: Switch-PT-Empty (modular switch), not a fixed-port 2960.
+1. Place Switch-PT-Empty; open Physical view.
+2. Switch the device off before inserting/removing modules.
+3. Insert supported PT-SWITCH-NM-1CFE copper Fast Ethernet modules
+   into three available slots shown by the installed Packet Tracer version.
+4. Power on; open Config/CLI and identify the actual interface names.
+5. Attach two PC-PT hosts to two copper Fast Ethernet ports.
+6. For a fibre demonstration, power off and add a supported fibre module
+   to each of two Switch-PT devices, then use the matching fibre cable.
+7. Power on, inspect link state and verify the module/port inventory.
+Module availability and resulting slot/interface numbering are version-specific.
+Do not paste fixed interface names until show interfaces identifies them.

@@ -1,0 +1,7 @@
+PC1 --- Fa0/1 SW1 Fa0/3 --- Gi0/0 R1 Gi0/1 --- Fa0/3 SW2 Fa0/1 --- PC3
+PC2 --- Fa0/2 SW1                                 SW2 Fa0/2 --- PC4
+All links use copper straight-through Ethernet cables.
+R1: 2911; SW1/SW2: 2960. Apply switch.cfg to both switches.
+PC1: ping 192.168.10.12
+PC1: ping 192.168.20.11
+PC4: ping 192.168.10.11

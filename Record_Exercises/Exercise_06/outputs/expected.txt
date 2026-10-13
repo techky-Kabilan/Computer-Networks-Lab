@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+Anonymous-enabled servers return a 230 success reply. Restricted servers return 530. An unreachable host produces a separate connection error.

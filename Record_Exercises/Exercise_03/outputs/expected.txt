@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+Straight-through tester maps pins 1-8 identically. Crossover maps 1-3, 2-6, 3-1, 6-2; other pins match. A correctly terminated cable gives a working link.

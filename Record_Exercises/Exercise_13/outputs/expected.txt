@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+The supplied synthetic fixture contains one UDP packet from 192.0.2.10:12345 to 192.0.2.20:9999. The diagram should show these endpoints and their communication.

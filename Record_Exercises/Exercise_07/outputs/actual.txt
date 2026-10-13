@@ -1,0 +1,6 @@
+Actual localhost demonstration:
+add(12, 4) = 16
+subtract(12, 4) = 8
+multiply(12, 4) = 48
+divide(12, 4) = 3.0
+divide(12, 0) = XML-RPC fault: division by zero

@@ -1,0 +1,16 @@
+Actual independent fixture verification; NOT PcapXray output.
+{
+  "destination_ip": "192.0.2.20",
+  "destination_mac": "00:11:22:33:44:55",
+  "destination_port": 9999,
+  "ethertype": "0x0800",
+  "header_length": 20,
+  "length": 47,
+  "protocol": "UDP",
+  "source_ip": "192.0.2.10",
+  "source_mac": "66:77:88:99:aa:bb",
+  "source_port": 12345,
+  "ttl": 64,
+  "udp_length": 27
+}
+PCAP: 1 Ethernet/IPv4/UDP packet; no live traffic.

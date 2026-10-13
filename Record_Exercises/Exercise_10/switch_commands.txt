@@ -1,0 +1,20 @@
+enable
+show interfaces
+show ip interface brief
+configure terminal
+hostname ModularSwitch
+! Use the actual first populated copper port, e.g. FastEthernet0/1:
+interface FastEthernet0/1
+ switchport mode access
+ no shutdown
+exit
+! Use the actual second populated copper port, e.g. FastEthernet1/1:
+interface FastEthernet1/1
+ switchport mode access
+ no shutdown
+end
+copy running-config startup-config
+show mac address-table
+PC1: IPv4 192.168.30.11, mask 255.255.255.0, gateway blank
+PC2: IPv4 192.168.30.12, mask 255.255.255.0, gateway blank
+PC1 command prompt: ping 192.168.30.12

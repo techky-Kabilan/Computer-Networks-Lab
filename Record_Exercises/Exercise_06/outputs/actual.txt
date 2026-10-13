@@ -1,0 +1,3 @@
+Actual localhost FTP tests (ephemeral ports):
+{"anonymous": true, "host": "127.0.0.1", "port": 58871, "reply": "230 Login successful."}
+{"anonymous": false, "host": "127.0.0.1", "port": 58873, "reply": "530 Anonymous access not allowed."}

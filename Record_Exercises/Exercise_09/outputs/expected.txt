@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+Both connected networks appear in the routing table; after ARP resolution all PCs can communicate.

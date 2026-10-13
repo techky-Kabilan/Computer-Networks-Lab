@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+The listener displays the client command output; exit displays Session closed and ends the connection.

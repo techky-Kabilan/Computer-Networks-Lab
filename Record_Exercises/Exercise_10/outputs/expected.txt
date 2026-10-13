@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+The new interfaces appear after power-on and connected copper/fibre ports show working links. Same-subnet PCs exchange replies.

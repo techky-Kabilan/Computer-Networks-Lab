@@ -1,0 +1,18 @@
+LINUX - apply only to the interface/profile assigned in the lab:
+sudo ip address add 192.168.1.10/24 dev eth0
+sudo ip link set eth0 up
+sudo ip route add default via 192.168.1.254 dev eth0
+ip route get 10.10.1.4
+sudo tcpdump -i eth0 -c 10 host 8.8.8.8
+sudo tcpdump -i eth0 port 53
+nmcli connection show
+sudo nmcli connection modify "Wired connection 1" ipv4.method manual ipv4.addresses 192.0.2.1/24 ipv4.gateway 192.0.2.254 ipv4.dns 192.0.2.200 ipv4.dns-search example.com
+sudo nmcli connection modify "Wired connection 1" ipv6.method manual ipv6.addresses 2001:db8:1::fffe/64 ipv6.gateway 2001:db8:1::ffee ipv6.dns 2001:db8:1::ffbb
+sudo nmcli connection up "Wired connection 1"
+ip address show
+ip -6 route show default
+cat /etc/resolv.conf
+To restore automatic addressing:
+sudo nmcli connection modify "Wired connection 1" ipv4.method auto ipv4.addresses "" ipv4.gateway "" ipv4.dns ""
+sudo nmcli connection modify "Wired connection 1" ipv6.method auto ipv6.addresses "" ipv6.gateway "" ipv6.dns ""
+sudo nmcli connection up "Wired connection 1"

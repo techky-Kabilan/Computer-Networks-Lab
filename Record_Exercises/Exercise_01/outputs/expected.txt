@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+Assigned hosts reply to ping; route commands show connected/default routes; DNS queries return the configured answer. Output addresses, ports and hop counts depend on the lab network.

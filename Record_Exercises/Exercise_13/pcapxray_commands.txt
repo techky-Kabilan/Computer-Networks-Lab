@@ -1,0 +1,20 @@
+Linux lab setup (current upstream PcapXray):
+sudo apt-get update
+sudo apt-get install -y python3-tk graphviz tshark git
+git clone https://github.com/srixivas/PcapXray.git
+cd PcapXray
+python3 -m venv .venv --system-site-packages
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python Source/main.py
+
+Offline file analysis:
+Choose supplied sample.pcap under the record exercise folder.
+Choose an output directory and the auto engine.
+Click Analyze!, then Visualize!.
+Inspect devices, protocol classifications and communication flows.
+Save the report/network diagram and document the observed endpoints.
+No root privilege is required for offline file analysis.
+
+Independent fixture cross-check (not PcapXray output):
+tshark -r sample.pcap -T fields -e frame.number -e ip.src -e ip.dst -e udp.srcport -e udp.dstport

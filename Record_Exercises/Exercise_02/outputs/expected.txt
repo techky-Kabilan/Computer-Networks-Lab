@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+Both PCs show their assigned addresses and can exchange ICMP replies; a configured, connected gateway replies.

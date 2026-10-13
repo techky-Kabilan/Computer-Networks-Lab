@@ -1,0 +1,19 @@
+Windows graphical configuration:
+Settings > Network & Internet > Advanced network settings > More network adapter options.
+Open the lab Ethernet adapter Properties > Internet Protocol Version 4 (TCP/IPv4).
+Select Use the following IP address; enter the assigned row in addressing.csv.
+Enter DNS only if 192.168.20.1 provides the lab DNS service.
+Verify: ipconfig /all
+Verify PC1 to PC2: ping 192.168.20.12
+Verify gateway: ping 192.168.20.1
+Restore Obtain an IP address automatically / DNS automatically after the lab.
+
+Linux NetworkManager (replace LAB-ETH with the lab connection name):
+nmcli connection show
+sudo nmcli connection modify 'LAB-ETH' ipv4.method manual ipv4.addresses 192.168.20.11/24 ipv4.gateway 192.168.20.1 ipv4.dns 192.168.20.1
+sudo nmcli connection up 'LAB-ETH'
+ip -4 address show
+ip route show
+ping -c 4 192.168.20.12
+Restore: sudo nmcli connection modify 'LAB-ETH' ipv4.method auto ipv4.addresses '' ipv4.gateway '' ipv4.dns ''
+sudo nmcli connection up 'LAB-ETH'

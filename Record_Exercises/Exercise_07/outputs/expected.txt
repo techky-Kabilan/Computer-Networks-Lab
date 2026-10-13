@@ -1,0 +1,2 @@
+EXPECTED OUTPUT — not an execution record
+For 12 and 4, the returned values are 16, 8, 48 and 3.0; division by zero returns a fault.

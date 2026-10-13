@@ -1,6 +1,8 @@
 # Exercise 05: Develop a customized ping command to test the server connectivity
 
-[Open the PDF](CN_Exercise_05.pdf)
+**Exercise 05** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_05/CN_Exercise_05.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

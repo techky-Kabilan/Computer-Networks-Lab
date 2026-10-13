@@ -1,6 +1,8 @@
 # Exercise 01: Basic Networking Commands in Linux and Windows operating systems
 
-[Open the PDF](CN_Exercise_01.pdf)
+**Exercise 01** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_01/CN_Exercise_01.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

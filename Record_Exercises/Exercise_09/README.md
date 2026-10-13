@@ -1,6 +1,8 @@
 # Exercise 09: Design a simple topology and configure with one router, two switches and PCs using Cisco Packet Tracer
 
-[Open the PDF](CN_Exercise_09.pdf)
+**Exercise 09** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_09/CN_Exercise_09.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

@@ -1,6 +1,8 @@
 # Exercise 07: Develop a simple calculator using XMLRPC
 
-[Open the PDF](CN_Exercise_07.pdf)
+**Exercise 07** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_07/CN_Exercise_07.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

@@ -1,6 +1,8 @@
 # Exercise 02: Learning and Assignment of IP Address manually to computers
 
-[Open the PDF](CN_Exercise_02.pdf)
+**Exercise 02** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_02/CN_Exercise_02.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

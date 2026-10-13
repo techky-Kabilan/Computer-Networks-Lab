@@ -1,6 +1,8 @@
 # Exercise 11: Examine Network Address Translation (NAT) using Cisco Packet Tracer
 
-[Open the PDF](CN_Exercise_11.pdf)
+**Exercise 11** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_11/CN_Exercise_11.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

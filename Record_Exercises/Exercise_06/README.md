@@ -1,6 +1,8 @@
 # Exercise 06: Building anonymous FTP Scanner using ftplib module
 
-[Open the PDF](CN_Exercise_06.pdf)
+**Exercise 06** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_06/CN_Exercise_06.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

@@ -1,6 +1,8 @@
 # Exercise 10: Customize Switch with Network Modules using Cisco Packet Tracer
 
-[Open the PDF](CN_Exercise_10.pdf)
+**Exercise 10** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_10/CN_Exercise_10.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

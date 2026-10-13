@@ -1,6 +1,8 @@
 # Exercise 12: Nmap to discover live hosts using ARP scan, ICMP scan, and TCP/UDP ping scan in TryHackMe Platform.
 
-[Open the PDF](CN_Exercise_12.pdf)
+**Exercise 12** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_12/CN_Exercise_12.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

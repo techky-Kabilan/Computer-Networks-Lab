@@ -1,6 +1,8 @@
 # Exercise 13: Demonstrate network forensics using PcapXray tool
 
-[Open the PDF](CN_Exercise_13.pdf)
+**Exercise 13** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_13/CN_Exercise_13.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

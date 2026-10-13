@@ -1,6 +1,8 @@
 # Exercise 15: To Analyze the different types of servers using Webalizer tool
 
-[Open the PDF](CN_Exercise_15.pdf)
+**Exercise 15** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_15/CN_Exercise_15.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

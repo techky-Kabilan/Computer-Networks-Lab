@@ -1,6 +1,8 @@
 # Exercise 14: To capture, save, and analyze network traffic on TCP / UDP / IP / HTTP / ARP /DHCP /ICMP /DNS using Wireshark Tool
 
-[Open the PDF](CN_Exercise_14.pdf)
+**Exercise 14** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_14/CN_Exercise_14.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

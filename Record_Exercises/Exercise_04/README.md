@@ -1,6 +1,8 @@
 # Exercise 04: Implement packet sniffing using raw sockets in python
 
-[Open the PDF](CN_Exercise_04.pdf)
+**Exercise 04** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_04/CN_Exercise_04.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 

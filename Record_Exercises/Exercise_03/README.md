@@ -1,6 +1,8 @@
 # Exercise 03: Study of different types of Network Cables and Crimping of cable with RJ45 connector
 
-[Open the PDF](CN_Exercise_03.pdf)
+**Exercise 03** · [Download this exercise PDF](https://github.com/techky-Kabilan/Computer-Networks-Lab/raw/refs/heads/main/Record_Exercises/Exercise_03/CN_Exercise_03.pdf)
+
+Read the complete exercise below. The download opens the PDF file directly.
 
 ## Aim
 
